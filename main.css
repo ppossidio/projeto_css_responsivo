@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #192a56;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cac9c9;
+}
+
+.container h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    color: #192a56;
+    border-bottom: 2px solid #192a56;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre p {
+    margin-bottom: 12px;
+}
+
+.sobre img {
+    height: 460px;
+    margin-top: 36px;
+    margin-right: 36px;
+}
+
+.tenis h2 {
+    margin-top: 46px;
+}
+
+.tenis img {
+    max-width: 100%;
+    margin-right: 8px;
+}
+
+.tenis ul {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        column-gap: 1%;
+        row-gap: 5%;
+        list-style: none;
+}
+
+.tenis ul li img {
+    max-width: 100%;
+    transition: transform 0.3s;
+    border-radius: 16px;
+}
+
+.tenis ul li img:hover {
+    transform: scale(1.05); 
+}
+
+.tenis li h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.tenis li p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+}
+
+.tenis button {
+    background-color: #192a56;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 16px 16px
+}
+
+.tenis button:hover {
+    background-color: #476ac2;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    header h1 {
+        margin-left: 24px;
+    }
+
+    ul li a {
+        margin-right: 42px;
+    }
+
+    .sobre,
+    .tenis {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre img {
+        height: auto;
+        width: 90%; 
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre div,
+    .tenis {
+        max-width: 90%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .tenis ul {
+        margin: 0 auto; 
+        width: 90%;
+    }
+
+    .tenis ul li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tenis button {
+        width: 100%; 
+        margin: 8px 0;
+    }
+
+    .tenis li p {
+        font-size: 12px;
+    }
+
+    .tenis ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sobre {
+        display: block;
+        max-width: 90%;
+    }
+
+    .sobre img {
+        max-width: 100%;
+        margin: 12 auto;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .tenis ul {
+        display: block;
+        max-width: 90%;
+        margin-left: 12px;
+    }
+
+    .tenis {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
